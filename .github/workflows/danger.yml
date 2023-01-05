@@ -1,0 +1,17 @@
+name: CI Pull Requests
+on:
+  pull_request:
+    types: [opened, repopend, edited]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+      - name: Danger
+        run: npx danger ci
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
