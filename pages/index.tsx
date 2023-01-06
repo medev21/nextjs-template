@@ -1,5 +1,6 @@
-const Home = () => (
-    <h1>this is a test</h1>
-)
+const Home = () => {
+    const text = 'hellow';
+    return <h1>{text}</h1>;
+};
 
 export default Home;

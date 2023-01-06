@@ -1,29 +1,55 @@
 {
-  "name": "crypto-dashboard",
-  "version": "1.0.0",
-  "description": "a collection of favorite cryptos",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "author": "Martin Benavides (medev21)",
-  "license": "ISC",
-  "dependencies": {
-    "next": "^13.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.26",
-    "danger": "^11.2.0",
-    "husky": "^8.0.2",
-    "typescript": "4.9.4"
-  }
+    "name": "crypto-dashboard",
+    "version": "1.0.0",
+    "description": "a collection of favorite cryptos",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "pretty": "prettier --write .",
+        "typecheck": "npx tsc"
+    },
+    "author": "Martin Benavides (medev21)",
+    "license": "ISC",
+    "dependencies": {
+        "next": "^13.1.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0",
+        "@types/node": "^18.11.18",
+        "@types/react": "^18.0.26",
+        "@typescript-eslint/eslint-plugin": "^5.48.0",
+        "@typescript-eslint/parser": "^5.48.0",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "danger": "^11.2.0",
+        "eslint": "^8.31.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-import-resolver-babel-module": "^5.3.1",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.1",
+        "typescript": "^4.9.4"
+    },
+    "lint-staged": {
+        "pages/**/*.{js,jsx,ts,tsx,json}": [
+            "npm run pretty"
+        ],
+        "src/**/*.{js,jsx,ts,tsx,json}": [
+            "npm run pretty"
+        ],
+        "src/**/*.{css,scss}": [
+            "npm run pretty"
+        ]
+    }
 }
