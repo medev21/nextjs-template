@@ -9,7 +9,8 @@
         "build": "next build",
         "start": "next start",
         "pretty": "prettier --write .",
-        "typecheck": "npx tsc"
+        "typecheck": "npx tsc",
+	"prepare": "husky install"
     },
     "author": "Martin Benavides (medev21)",
     "license": "ISC",

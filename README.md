@@ -8,7 +8,7 @@ This template cointains the following tools:
 
 ## After Cloning
 
-Install husky, run this command:
+If husky is not working, then install it:
 `npx husky install`
 
 See docs for more information
